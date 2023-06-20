@@ -26,12 +26,22 @@ public class RectangleServices {
         
         return r;
     }
-    
-    public int dataSurface(int a, int b){
-        return b*a;
+    //Una forma de realizar el metodo
+    public void dataSurface(Rectangle a){
+        System.out.println("Area: " + a.getAltura()*a.getBase());
     }
+    //Otro forma de realzar el metodo
     public int dataPerimeter(int a, int b){
         return (b+a)*2;
+    }
+    
+    public void drawRectangle2(Rectangle a){
+        for (int i = 0; i < a.getAltura(); i++) {
+            for (int j = 0; j < a.getBase(); j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
     public void drawRectangle(int a, int b){
         for (int i = 0; i < a; i++) {

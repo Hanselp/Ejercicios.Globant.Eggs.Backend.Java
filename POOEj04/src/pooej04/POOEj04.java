@@ -20,9 +20,16 @@ public class POOEj04 {
        Rectangle r = os.dataRectangle();
        
         System.out.println();
+        
         System.out.println("Perimeter: " + os.dataPerimeter(r.getAltura(), r.getBase()));
-        System.out.println("Surface: " + os.dataSurface(r.getAltura(), r.getBase()));
+        
+        os.dataSurface(r);
+        
         os.drawRectangle(r.getAltura(), r.getBase());
+        
+        System.out.println();
+        
+        os.drawRectangle2(r);
     }
     
 }
