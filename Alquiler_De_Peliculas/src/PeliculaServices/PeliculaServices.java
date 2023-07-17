@@ -128,9 +128,12 @@ public class PeliculaServices {
                     + "Género: " + peliculaSeleccionada.getGenero() + "\n"
                     + "Año: " + peliculaSeleccionada.getAnho() + "\n"
                     + "Duracion: " + peliculaSeleccionada.getDuracion());
+            
+            copiarElemento(listaPeliculas, listaPeliculas, seleccion);
             //peliculaAlquilada.addAll(seleccion,);
             //AlquilerServices.peliculaAlquilada.add(PeliculaServices.listaPeliculas.get(seleccion));
             //peliculaAlquilada.add(seleccion, );
+            
             PeliculaServices.listaPeliculas.remove(seleccion);
 
         }
@@ -190,4 +193,14 @@ public class PeliculaServices {
                 break;
         }
     }
+    
+    public static <T> void copiarElemento(List<T> listaFuente, List<T> listaDestino, int indice) {
+        if (indice >= 0 && indice < listaFuente.size()) {
+            T elemento = listaFuente.get(indice);
+            listaDestino.add(elemento);
+        } else {
+            System.out.println("El índice es inválido");
+        }
+    }
 }
+
